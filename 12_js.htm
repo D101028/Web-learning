@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<title>Javascript</title>
+<script type="text/javascript">
+// loop
+var n=0;
+while(n<=5){
+    n++;
+    alert("HelloWorld"+"-"+n);
+}
+var n=0;
+for(;n<=5;){  // (初始區塊(可不寫);判斷;迴圈區塊(可不寫))
+    n++;
+    alert("HelloWorld"+"-"+n);
+}
+for(var n=0;n<=5;n++){
+    alert("HelloWorld"+"-"+n);
+}
+// break;continue，與 python 一樣
+var n1=0;
+while(n<=100){
+    if (n==50){
+        break;
+    }
+    n1++;
+}
+alert(n1);
+</script>
+</head>
+<body>
+</body>
+</html>

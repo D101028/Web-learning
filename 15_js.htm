@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<title>Javascript</title>
+<script type="text/javascript">
+// 函式變形
+function test01(n1,n2){
+    n=n1+n2;
+    return n;
+}
+// 把函式當成一種資料，放入變數 add 中
+var add=function(n1,n2){
+    alert(n1+n2);
+};
+add(123,654);
+// 函式創建新的名稱空間
+var x=3; // 同一個變數只能 var (宣告) 一次 // 全域空間，全域變數
+// but 函式內式另一個名稱空間，所以以下是可行的
+// 電腦搜尋變數定義會先找變數所在的位置(函式內部或是外部)，再找外部
+function text(){
+    var x=4; // 區域空間，區域變數
+    var y=5;
+    alert(x+y);
+}
+// 外部程式碼不能使用內部的變數
+</script>
+</head>
+<body>
+</body>
+</html>

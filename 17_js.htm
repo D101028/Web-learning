@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<title>Javascript</title>
+<script type="text/javascript">
+// 遊戲中的玩家設計
+/*
+var player=new Object();
+player.name="python";
+player.hp=100;
+player.fight=function(){
+    this.hp=this.hp-2;
+};
+player.rest=function(){
+    this.hp++;
+};
+player.report=function(){
+    alert(this.name+": "+this.hp);
+};
+player.fight();
+player.rest();
+player.report();
+*/
+
+// 建構函式(建構式) (習慣首字大寫)
+function Player(name,hp){ // 建構物件的函式
+    // this 代表新建的空白物件
+    this.name=name;
+    this.hp=hp;
+    this.fight=function(){
+        this.hp=this.hp-2;
+    };
+    this.rest=function(){
+        this.hp++;
+    };
+    this.report=function(){
+        alert(this.name+": "+this.hp);
+        if(this.hp<=0){
+            alert(this.name+" died");
+        }
+    };
+}
+// 呼叫建構式 加 new 建立新物件
+var player=new Player("John",100);
+player.fight();
+player.rest();
+player.report();
+var player2=new Player("Terry",-87);
+player2.fight();
+player2.rest();
+player2.report();
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML DOM</title>
+<script type="text/javascript">
+var n=1;
+function change(){ // window. 可以省略
+    window.document.body.style.fontFamily="微軟正黑體";
+    if(n==1){
+        var spanObj=window.document.getElementById("dowhat");
+        spanObj.innerHTML="kill people";
+        spanObj.style.color="red";
+        spanObj.style.fontWeight="bold"; // spanOgj.style.font-weight="bold"，其中 "-" js 會無法判斷，所以要改一下
+        // spanObj.style.display="none";
+    }
+    if(n==2){
+        var spanObj2=window.document.getElementById("second");
+        spanObj2.innerHTML="DON NOT PUSH THAT AGAIN";
+        spanObj2.style.color="red";
+        spanObj2.style.fontSize="50px";
+        spanObj2.style.fontWeight="bold";
+    }
+    if(n==3){
+        var obj01=window.document.getElementById("third");
+        var spanObj3=window.document.getElementById("second");
+        // 修改文字、置中
+        spanObj3.innerHTML="I have warned you.";
+        spanObj3.style.fontSize="100px";
+        spanObj3.style.display="flex";
+        spanObj3.style.justifyContent="center";
+        // 刪除 button 
+        var obj = document.getElementById("123");
+        obj.innerHTML = "";
+        var parentObj = obj.parentNode;
+        parentObj.removeChild(obj);
+        // 背景為黑
+        obj01.style.backgroundColor="black";
+        // 等待5 sec
+        setTimeout(function(){
+            alert("I curse you hitting the little finger of your foot.");
+        },5000);
+    }
+    n++
+}
+</script>
+</head>
+<body id="third">
+    <div id="second">
+        Today is a good day. Let's <span id="dowhat">go to movie</span>.
+    </div>
+    <button id="123" onclick="change();">Change</button>
+</body>
+</html>

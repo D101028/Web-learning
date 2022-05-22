@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<title>Javascript</title>
+<script type="text/javascript">
+// 判斷式
+// if(true){
+//     alert("Hello World");
+// } // (false) 則會跳過大括號
+// var money=prompt("想要多少錢");
+// if(money>30000){
+//     alert("吃屎吧你");
+// }else{
+//     alert("甲賽啦");
+// }
+
+// var money=prompt("想要多少錢","");
+// if(money>30000){
+//     alert("吃屎吧你");
+// }else if (money<0){
+//     alert("智障是嗎");
+// }else{
+//     alert("甲賽啦");
+// }
+
+var n1=prompt("輸入數字", "");
+var n2=prompt("輸入數字", "");
+// 是字串喔，js 能以字串形式做數字運算，但 + 不一樣，它會進行字串串接
+// 字串 => 數字
+n1=Number(n1);
+n2=Number(n2);
+var op=prompt("輸入運算:+,-,*,/", "");
+if(op=="+"){
+    result=n1+n2;
+}else if(op=="-"){
+    result=n1-n2;
+}else if(op=="*"){
+    result=n1*n2;
+}else if(op=="/"){
+    result=n1/n2;
+}else{
+    result="error"
+}
+alert(result);
+</script>
+</head>
+<body>
+</body>
+</html>
